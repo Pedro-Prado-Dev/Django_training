@@ -1,1 +1,1 @@
-# Django_training
+# Django_training and exercises
