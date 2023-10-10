@@ -14,7 +14,7 @@
         {% for cidade in cidades %}
         <a class="list-group-item {% if cidade.capital %} active {% endif %}" href="{% url 'cidades-detalhe' cidade.id %}">
 
-            Nome: {{ cidade }}
+            {{ cidade }}
         </a>
         {% endfor %}
 

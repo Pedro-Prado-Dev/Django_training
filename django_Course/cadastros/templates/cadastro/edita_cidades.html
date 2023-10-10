@@ -6,7 +6,7 @@
     {{ form.errors }}
 
 
-    <form action="{% url 'cidades-editar' obj.id %}" method="POST">
+    <form method="POST">
         {% csrf_token %}
         <div class="form-group">
             <label>Nome:</label>
