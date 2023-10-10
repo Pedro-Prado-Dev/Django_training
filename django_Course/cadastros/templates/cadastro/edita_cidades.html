@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block conteudo %}
+
+    <h1>Editar Cidade:</h1>
+    {{ form.errors }}
+
+
+    <form action="{% url 'cidades-editar' obj.id %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label>Nome:</label>
+            {{ form.name }}
+        </div>
+
+        <div class="form-check">
+            {{ form.capital }}
+            <label class="form-check-label">É capital</label>
+        </div>
+        <input type="submit" value="Atualizar" class="btm btn-primary">
+    </form>
+
+
+{% endblock %}
