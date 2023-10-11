@@ -19,6 +19,20 @@
 <body>
 <div class="container">
     <div class="alert alert-secondary" role="alert">Bem-vindo a página do Projeto SIDIA</div>
+
+    {% if messages %}
+
+        {% for message in messages %}
+            <div class="alert alert-info alert-dismissible fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        {% endfor %}
+
+    {% endif %}
     {% block conteudo %}
 
     {% endblock %}

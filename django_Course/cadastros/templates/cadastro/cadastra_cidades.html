@@ -8,15 +8,7 @@
 
     <form action="{% url 'cadastra-cidade' %}" method="POST">
         {% csrf_token %}
-        <div class="form-group">
-            <label>Nome:</label>
-            {{ form.name }}
-        </div>
-
-        <div class="form-check">
-            {{ form.capital }}
-            <label class="form-check-label">É capital</label>
-        </div>
+        {{ form.as_p }}
         <input type="submit" value="salvar" class="btm btn-primary">
     </form>
 
