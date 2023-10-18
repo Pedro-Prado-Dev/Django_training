@@ -5,12 +5,12 @@ services:
   sidia_bd:
     image: mdillon/postgis
     environment:
-      POSTGRES_PASWORD: root
+      POSTGRES_PASSWORD: root
       POSTGRES_DB: sidia
     ports:
       - "5433:5432"
     volumes:
-      - /backup/arquivos:/var/lib/postgresql/data
+      - postgres-data:/var/lib/postgresql/data
 
   adminer:
     image: adminer

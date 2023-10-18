@@ -125,12 +125,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-try:
-    import __dev__
-    from .settings_dev import *
-except ImportError:
-    try:
-        import __production__
-        from .settings_production import *
-    except:
-        pass
+# try:
+#     import __dev__
+#     from .settings_dev import *
+# except ImportError:
+#     try:
+#         import __production__
+#         from .settings_production import *
+#     except:
+#         pass

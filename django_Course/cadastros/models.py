@@ -26,6 +26,7 @@ class Cidade(models.Model):
     name = models.CharField(max_length=100, unique=True)
     capital = models.BooleanField(default=False)
     estado = models.ForeignKey(Estado, on_delete=models.PROTECT, null=True, blank=False)
+    descricao = models.TextField(verbose_name='Descrição', blank=True, null=True)
 
     def __str__(self):
         return self.name
