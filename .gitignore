@@ -1,3 +1,7 @@
 venv
 .idea
 db.sqlite3
+/django_Course/static/
+/django_Course/log/*
+/django_Course/media/*
+!.gitkeep
