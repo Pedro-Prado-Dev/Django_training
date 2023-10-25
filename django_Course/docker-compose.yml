@@ -11,6 +11,9 @@ services:
     entrypoint: ['sh', 'run-django.sh']
     depends_on:
       - bd
+    networks:
+      - database
+      - web
 
   proxy:
     image: nginx
@@ -32,10 +35,8 @@ services:
     environment:
       POSTGRES_PASSWORD: root
       POSTGRES_DB: sidia
-    ports:
-      - "5434:5432"
     volumes:
-      - sidia-data-prod:/var/lib/postgresql/data
+      - sidia-data -prod:/var/lib/postgresql/data
 
 
 volumes:

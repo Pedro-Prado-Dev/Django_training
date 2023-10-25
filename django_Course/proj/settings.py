@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_URL = '/login/'
+LOGOUT_URL = '/logout/'
 
 # Application definition
 
@@ -128,6 +132,13 @@ STATIC_ROOT = 'static'
 STATICFILES_DIRS =[
     BASE_DIR / "static_files",
 ]
+
+MEDIA_ROOT = 'media'
+MEDIA_URL = 'files/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+DJANGO_TABLES2_TEMPLATE = "django_tables2/bootstrap4.html"
 
 # try:
 #     import __dev__
